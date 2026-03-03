@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html class="scroll-smooth" lang="pt-BR">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Terminal de Portifólios | REIS AUTOMAÇÃO®</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;700&amp;family=Space+Grotesk:wght@300;500;700&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#f02110',
+                        dark: '#0a0a0a',
+                        surface: '#121212',
+                        muted: '#1f1f1f',
+                        gridline: 'rgba(255, 87, 36, 0.1)',
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        mono: ['Inter', 'monospace'],
+                    },
+                    borderRadius: {
+                        'custom': '0px',
+                    }
+                }
+            }
+        }
+    </script>
+    <style type="text/tailwindcss">
+        :root {
+            --primary: #ff5724;
+            --dark: #000000;
+        }
+        body {
+            background-color: var(--dark);
+            color: #ffffff;
+            font-family: 'Inter', sans-serif;
+            background-image: 
+                linear-gradient(var(--gridline) 1px, transparent 1px),
+                linear-gradient(90deg, var(--gridline) 1px, transparent 1px);
+            background-size: 50px 50px;
+        }
+        .scanline {
+            width: 100%;
+            height: 2px;
+            background: rgb(255, 87, 36, 0.1);
+            position: fixed;
+            top: 0;
+            z-index: 100;
+            pointer-events: none;
+        }
+        .data-card {
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            background: rgba(18, 18, 18, 0.8);
+            backdrop-filter: blur(20px);
+            transition: all 0.3s ease;
+        }
+        .data-card:hover {
+            border-color: var(--primary);
+            box-shadow: 0 0 20px rgba(255, 87, 36, 0.15);
+        }
+        .glitch-text {
+            text-shadow: 2px 0 #ff5724, -2px 0 #00ffff;
+        }
+        .cyber-border {
+            clip-path: polygon(0 0, 100% 0, 100% 85%, 85% 100%, 0 100%);
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 200, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+</head>
+
+<body class="antialiased selection:bg-primary selection:text-white">
+    <div class="scanline"></div>
+    <header class="fixed top-0 left-0 w-full z-50 bg-dark/80 backdrop-blur-md border-b border-white/10">
+        <div class="container mx-auto px-4 py-4 flex items-center justify-between">
+            <a class="text-2xl font-bold tracking-tighter flex items-center gap-2" href="Portifolios.html">
+                <span class="material-symbols-outlined text-primary">terminal</span>
+                PORTIFÓLIOS<span class="text-primary font-mono text-sm">[v2.0.4]</span>
+            </a>
+            <nav class="hidden lg:flex items-center space-x-8 font-mono text-[10px] uppercase tracking-widest">
+                <div class="flex items-center gap-2 text-primary">
+                    <span class="w-2 h-2 bg-primary animate-pulse"></span>
+                    SYSTEM_ACTIVE
+                </div>
+                <a class="hover:text-primary transition-colors flex items-center gap-1" href="Página Inicial.html"><span
+                        class="text-white/30">01.</span>Home</a>
+                <a class="hover:text-primary transition-colors flex items-center gap-1" href="Serviços.html"><span
+                        class="text-white/30">02.</span>Serviços</a>
+                <a class="text-primary flex items-center gap-1" href="Portifolios.html"><span
+                        class="text-white/30">03.</span>Portifolio</a>
+                <a class="bg-primary/10 border border-primary/50 text-primary px-4 py-2 hover:bg-primary hover:text-white transition-all"
+                    href="Contato.html">ESTABELECER_CONTATO</a>
+            </nav>
+            <button aria-label="Menu" class="lg:hidden text-primary">
+                <span class="material-symbols-outlined">menu_open</span>
+            </button>
+        </div>
+    </header>
+    <main class="pt-24 pb-20">
+        <section class="container mx-auto px-4 mb-12">
+            <div class="border-l-4 border-primary pl-6 py-8 bg-surface/50 cyber-border">
+                <p class="font-mono text-primary text-xs mb-2 flex items-center gap-2">
+                    <span class="material-symbols-outlined text-[14px]">sensors</span>
+                    QUERY_EXECUTION: PORTFOLIO_FILTER_ALL
+                </p>
+                <h1 class="text-4xl lg:text-6xl font-bold uppercase leading-none mb-6 gradient-text">
+                    NÚCLEO DE
+                    PORTIFÓLIOS ATIVOS</span>
+                </h1>
+                <p class="font-inter text-gray-400 text-sm max-w-2xl leading-relaxed">Explore a interfaces de projetos
+                    de
+                    alta performance e arquiteturas otimizadas.
+                    Nossa base de portifólios contém sites personalizados, landing pages de alta conversão e sistemas
+                    visuais para redes sociais,
+                    projetados para máxima eficiência e impacto.</p>
+                <div class="mt-8 flex flex-wrap gap-3 font-mono text-[10px]">
+                    <button class="px-4 py-1 bg-primary text-white border border-primary">DATASET: TUDO</button>
+                    <button
+                        class="px-4 py-1 bg-transparent border border-white/20 hover:border-primary transition-colors">TYPE:
+                        WEBSITES</button>
+                    <button
+                        class="px-4 py-1 bg-transparent border border-white/20 hover:border-primary transition-colors">TYPE:
+                        LANDING PAGES</button>
+                    <button
+                        class="px-4 py-1 bg-transparent border border-white/20 hover:border-primary transition-colors">TYPE:
+                        AI AUTOMAÇÃO</button>
+                </div>
+            </div>
+        </section>
+        <section class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div class="data-card p-4 flex flex-col group">
+                    <div class="relative h-64 mb-6 overflow-hidden bg-muted border border-white/5">
+                        <img class="w-full h-full object-cover opacity-40 grayscale group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700"
+                            src="./imagens/mendes-odonto-portifolios.png" />
+                        <div class="absolute inset-0 bg-gradient-to-t from-dark to-transparent"></div>
+                        <div
+                            class="absolute top-4 left-4 font-mono text-[10px] text-primary bg-dark/80 px-2 py-1 border border-primary/30">
+                            ID: #WS-001
+                        </div>
+                    </div>
+                    <div class="flex-grow">
+                        <div class="flex justify-between items-start mb-4">
+                            <h2 class="text-3xl font-bold uppercase leading-none tracking-tighter">Mendes.odonto</h2>
+                            <span
+                                class="material-symbols-outlined text-primary group-hover:rotate-45 transition-transform">north_east</span>
+                        </div>
+                        <div class="grid grid-cols-2 gap-4 mb-6 font-mono text-[10px] border-t border-white/10 pt-4">
+                            <div>
+                                <p class="text-gray-500 uppercase">Classificação de Serviços</p>
+                                <p class="text-white">UI/UX WEBSITE DESIGN</p>
+                            </div>
+                            <div>
+                                <p class="text-gray-500 uppercase">Impacto</p>
+                                <p class="text-primary">+45% CONV.</p>
+                            </div>
+                        </div>
+                        <p class="font-inter text-xs text-gray-400 leading-relaxed mb-6">
+                            Site criado com arquiterura de informação institucional otimizada para alta performance e
+                            latência visual.
+                            Otimização de imagens e arquivos para redução de tamanho e melhorias na experiência do
+                            usuário.
+                        </p>
+                    </div>
+                    <a class="w-full py-3 bg-white/5 border border-white/10 hover:bg-primary/20 hover:border-primary transition-all text-center font-mono text-[10px] uppercase tracking-widest"
+                        href="#">
+                        Acessar Documentação_
+                    </a>
+                </div>
+                <div class="data-card p-4 flex flex-col group">
+                    <div class="relative h-64 mb-6 overflow-hidden bg-muted border border-white/5">
+                        <img class="w-full h-full object-cover opacity-40 grayscale group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuC4YlGt9gQ6k5Hs5nsXmsHVwkjVNvdAARpj3WykSpDGbxT3-ufL1eoPRwXvatFQw4pfdmA2GYrhLVlA3KALw5M3CU0VAB_pZzEmQf_oXFXeG42ThmNo0hpJIE3IIZbymMvFqrtv-BD3B9f_xPSD-r3RGKUaUdteBsxfQiK-62fozQlh_TjmswrUeBu4P9NlxBtxY_F2Uvx6OGD11XgaN1CfHUurIK9cM917iF3OUqaW6fPgQCmpg-Qcn9Mtz0vIoXuJIVBM_BHMmFI" />
+                        <div class="absolute inset-0 bg-gradient-to-t from-dark to-transparent"></div>
+                        <div
+                            class="absolute top-4 left-4 font-mono text-[10px] text-primary bg-dark/80 px-2 py-1 border border-primary/30">
+                            ID: #WS-002
+                        </div>
+                    </div>
+                    <div class="flex-grow">
+                        <div class="flex justify-between items-start mb-4">
+                            <h2 class="text-3xl font-bold uppercase leading-none tracking-tighter"> Rui Advocacia </h2>
+                            <span
+                                class="material-symbols-outlined text-primary group-hover:rotate-45 transition-transform">north_east</span>
+                        </div>
+                        <div class="grid grid-cols-2 gap-4 mb-6 font-mono text-[10px] border-t border-white/10 pt-4">
+                            <div>
+                                <p class="text-gray-500 uppercase">Classificação de Serviços</p>
+                                <p class="text-white">UI/UX WEBSITE DESIGN + AUTOMAÇÃO</p>
+                            </div>
+                            <div>
+                                <p class="text-gray-500 uppercase">conversão
+                                <p class="text-primary">+500 AGENDAMENTOS</p>
+                            </div>
+                        </div>
+                        <p class="font-inter text-xs text-gray-400 leading-relaxed mb-6">
+                            Website Premium criado para atendimento de alta demanda de agendamentos.
+                            clientes de alto poder aquisitivo o site foi pensado para causar uma impressão de autoridade
+                            e confiança.
+                            Cliente tambem adquiriu + 2 Agentes de IA que escalaram a operação.
+                        </p>
+                    </div>
+                    <a class="w-full py-3 bg-white/5 border border-white/10 hover:bg-primary/20 hover:border-primary transition-all text-center font-mono text-[10px] uppercase tracking-widest"
+                        href="#">
+                        Acessar Documentação_
+                    </a>
+                </div>
+                <div class="data-card p-4 flex flex-col group">
+                    <div class="relative h-64 mb-6 overflow-hidden bg-muted border border-white/5">
+                        <img class="w-full h-full object-cover opacity-40 grayscale group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuBhs7G0-BsV8lstffChGh52Xrb4J9fTM0DYEeGUJZ-GXaw313wsi1zrVynuWflerUbIN7nasKEInmFpIJqjlD-Z_XFKg0ZDeFQIb1JcCy39PyPKvvrPQkvULWjNgvatXEc1K22ysDJ10M7okaBpy9keLSc4KwxV47Bqy5M0k7_ogNvpkBRrMgVnHwzg7povwUgYfKO_t1hstBRC5Jr0tAz-TUYoXXApKap7-_OiEsqWblbdyLf1eclnPX7H7hTG9y5UYH2WJo0vL34" />
+                        <div class="absolute inset-0 bg-gradient-to-t from-dark to-transparent"></div>
+                        <div
+                            class="absolute top-4 left-4 font-mono text-[10px] text-primary bg-dark/80 px-2 py-1 border border-primary/30">
+                            ID: #LP-001
+                        </div>
+                    </div>
+                    <div class="flex-grow">
+                        <div class="flex justify-between items-start mb-4">
+                            <h2 class="text-3xl font-bold uppercase leading-none tracking-tighter">Michelle Rover
+                                (VENDAS)</h2>
+                            <span
+                                class="material-symbols-outlined text-primary group-hover:rotate-45 transition-transform">north_east</span>
+                        </div>
+                        <div class="grid grid-cols-2 gap-4 mb-6 font-mono text-[10px] border-t border-white/10 pt-4">
+                            <div>
+                                <p class="text-gray-500 uppercase">Classificação</p>
+                                <p class="text-white">UX/UI + AUTOMAÇÃO + COPYWRITING</p>
+                            </div>
+                            <div>
+                                <p class="text-gray-500 uppercase">OBJETIVO</p>
+                                <p class="text-primary">LANÇAMENTO DE PRODUTOR DIGITAL</p>
+                            </div>
+                        </div>
+                        <p class="font-inter text-xs text-gray-400 leading-relaxed mb-6">
+                            Criação de uma Landing Page de alta conversão para lançamento de produtor digital.
+                            O objetivo era criar uma página que fosse capaz de converter visitantes em leads
+                            e leads em clientes.
+                            O projeto foi um sucesso e gerou mais de 100 leads em 24 horas.
+                        </p>
+                    </div>
+                    <a class="w-full py-3 bg-white/5 border border-white/10 hover:bg-primary/20 hover:border-primary transition-all text-center font-mono text-[10px] uppercase tracking-widest"
+                        href="#">
+                        Acessar Documentação_
+                    </a>
+                </div>
+                <div class="data-card p-4 flex flex-col group">
+                    <div class="relative h-64 mb-6 overflow-hidden bg-muted border border-white/5">
+                        <img class="w-full h-full object-cover opacity-40 grayscale group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuC6sydfop-GQ0oKMYU-zUE-Ytkltj1HvGJAHat53qGRZEPkRBpGTTPYQnEHhiE2_5FNsLqb1Ewod2m-2B33Z5-SCBXtu5owyYl2kwMfXyh302LaBsBafCPtWIt7dxLKiBc6B9m43QWF4dGol51dP3HxBHhmJ9qBSEacCEl1vRpCwuBikahdf1hkNMfx1G3CP55wjBolJVLQ4cZchsSHEAFjlvvHu_13XU2204_MGl6RhggujaHXo4rD-gOLAMhfMaa_AXFMjFvA1T4" />
+                        <div class="absolute inset-0 bg-gradient-to-t from-dark to-transparent"></div>
+                        <div
+                            class="absolute top-4 left-4 font-mono text-[10px] text-primary bg-dark/80 px-2 py-1 border border-primary/30">
+                            ID:"AI-001"
+                        </div>
+                    </div>
+                    <div class="flex-grow">
+                        <div class="flex justify-between items-start mb-4">
+                            <h2 class="text-3xl font-bold uppercase leading-none tracking-tighter">Dr. vinicius duarte
+                                (clinica de estetica)</h2>
+                            <span
+                                class="material-symbols-outlined text-primary group-hover:rotate-45 transition-transform">north_east</span>
+                        </div>
+                        <div class="grid grid-cols-2 gap-4 mb-6 font-mono text-[10px] border-t border-white/10 pt-4">
+                            <div>
+                                <p class="text-gray-500 uppercase">Classificação</p>
+                                <p class="text-white">AUTOMAÇÃO DE ATENDIMENTO</p>
+                            </div>
+                            <div>
+                                <p class="text-gray-500 uppercase">ROI</p>
+                                <p class="text-primary">12.5x_SCALE</p>
+                            </div>
+                        </div>
+                        <p class="font-inter text-xs text-gray-400 leading-relaxed mb-6">
+                            Cliente adquiriu agentes de IA para atendimento e agendamento de pacientes.
+                            O agente foi treinado com a base de conhecimento da clínica e com as informações dos
+                            pacientes.
+                            O agente foi capaz de atender mais de 100 pacientes em 24 horas.
+                            O cliente relatou um aumento de 30% no número de pacientes agendados e uma redução de 50% no
+                            tempo de espera.
+                        </p>
+                    </div>
+                    <a class="w-full py-3 bg-white/5 border border-white/10 hover:bg-primary/20 hover:border-primary transition-all text-center font-mono text-[10px] uppercase tracking-widest"
+                        href="#">
+                        Acessar Documentação_
+                    </a>
+                </div>
+                <div class="data-card p-4 flex flex-col group">
+                    <div class="relative h-64 mb-6 overflow-hidden bg-muted border border-white/5">
+                        <img class="w-full h-full object-cover opacity-40 grayscale group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuD5yJ7uih-ElR9HerIUsrWxWusOuoiU8PStMYFywMYQL23tZtjPzdCTsRP1cYPfTngiHgVsVkkAgJiNuL2MqvlXLLAv-MSVCaPzDg3BhVB7PLrlKVDzkQGVivQOu9UmgldDn25t2pi4Ku3G7oGbkgpjxkJ5AiTTHnS_RRppv1QrgiLktr8yW4slv_jZYknHYgZIFb8KSCgPpv-7ttj-XSCwAjZpvG2pPUUxCZ9SM2W19OMFWkfM2XzGSF2Z-IIldFEgRutpHB02vAw" />
+                        <div class="absolute inset-0 bg-gradient-to-t from-dark to-transparent"></div>
+                        <div
+                            class="absolute top-4 left-4 font-mono text-[10px] text-primary bg-dark/80 px-2 py-1 border border-primary/30">
+                            ID: #WS-003
+                        </div>
+                    </div>
+                    <div class="flex-grow">
+                        <div class="flex justify-between items-start mb-4">
+                            <h2 class="text-3xl font-bold uppercase leading-none tracking-tighter">Urban Pulse
+                                (Ecommerce)</h2>
+                            <span
+                                class="material-symbols-outlined text-primary group-hover:rotate-45 transition-transform">north_east</span>
+                        </div>
+                        <div class="grid grid-cols-2 gap-4 mb-6 font-mono text-[10px] border-t border-white/10 pt-4">
+                            <div>
+                                <p class="text-gray-500 uppercase">Classificação de serviço</p>
+                                <p class="text-white">APRIMORAMENTO DO SITE COM UX-UI E SEO + DESIGN </p>
+                            </div>
+                            <div>
+                                <p class="text-gray-500 uppercase">Status</p>
+                                <p class="text-primary">DEPLOYED</p>
+                            </div>
+                        </div>
+                        <p class="font-inter text-xs text-gray-400 leading-relaxed mb-6">
+                            Cliente adquiriu pacote de aprimoramento do site com UX-UI e SEO + Design.
+                            O site foi desenvolvido com as melhores práticas de SEO e UX-UI, resultando em um aumento de
+                            30% no tráfego orgânico e uma redução de 50% no tempo de carregamento.
+                        </p>
+                    </div>
+                    <a class="w-full py-3 bg-white/5 border border-white/10 hover:bg-primary/20 hover:border-primary transition-all text-center font-mono text-[10px] uppercase tracking-widest"
+                        href="#">
+                        Acessar Documentação_
+                    </a>
+                </div>
+                <div class="data-card p-4 flex flex-col group">
+                    <div class="relative h-64 mb-6 overflow-hidden bg-muted border border-white/5">
+                        <img class="w-full h-full object-cover opacity-40 grayscale group-hover:grayscale-0 group-hover:scale-105 transition-all duration-700"
+                            src="https://lh3.googleusercontent.com/aida-public/AB6AXuDaEO2vfeOKsXamwS0EBNn35GdS12Yg_1q-RzM3xiGgh56Lx1-kdqoS79RSIZyy8SsRoXS9o8IGu0bWiQDFP-RLKUBBLoEyFTzkQDlU82-7bt2TfLcOr1EPC8Zt1thcsVMyzr9Nz6qGSrr4XAsghvq7DFh2tFB936ELs8wyHCrk2gpK-NvQMyZhOlejcBKQ4CBjTNq6cEUS6GuUI5kjltUhtPjmgaKsRxdr7BcjZTsxNyBbd_lXRXsZiQ-Ym9g-TzQWHj8h761uM_I" />
+                        <div class="absolute inset-0 bg-gradient-to-t from-dark to-transparent"></div>
+                        <div
+                            class="absolute top-4 left-4 font-mono text-[10px] text-primary bg-dark/80 px-2 py-1 border border-primary/30">
+                            ID: #DB-001
+                        </div>
+                    </div>
+                    <div class="flex-grow">
+                        <div class="flex justify-between items-start mb-4">
+                            <h2 class="text-3xl font-bold uppercase leading-none tracking-tighter">Eco Style</h2>
+                            <span
+                                class="material-symbols-outlined text-primary group-hover:rotate-45 transition-transform">north_east</span>
+                        </div>
+                        <div class="grid grid-cols-2 gap-4 mb-6 font-mono text-[10px] border-t border-white/10 pt-4">
+                            <div>
+                                <p class="text-gray-500 uppercase">Classificação de serviço</p>
+                                <p class="text-white">BRANDIG + PACOTE DE DESIGN PARA REDE SOCIAL</p>
+                            </div>
+                            <div>
+                                <p class="text-gray-500 uppercase">SEGUIDORES</p>
+                                <p class="text-primary">+ 70K EM 3 MESES</p>
+                            </div>
+                        </div>
+                        <p class="font-inter text-xs text-gray-400 leading-relaxed mb-6">
+                            Protocolo de branding focado em sustentabilidade e otimização de percepção de valor no
+                            mercado premium, criamos uma pacote de design para redes socias com carroseis e edição de
+                            video, houve um aumento de 120% no engajamento somente no instagram e 40% no tiktok.
+                        </p>
+                    </div>
+                    <a class="w-full py-3 bg-white/5 border border-white/10 hover:bg-primary/20 hover:border-primary transition-all text-center font-mono text-[10px] uppercase tracking-widest"
+                        href="#">
+                        Acessar Documentação_
+                    </a>
+                </div>
+            </div>
+        </section>
+        <section class="mt-20 border-y border-primary/20 py-8 bg-surface">
+            <div class="container mx-auto px-4 grid grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="text-center">
+                    <p class="font-mono text-[10px] text-gray-500 uppercase mb-2">Uptime do Sistema</p>
+                    <p class="text-2xl font-bold text-primary">99.99%</p>
+                </div>
+                <div class="text-center">
+                    <p class="font-mono text-[10px] text-gray-500 uppercase mb-2">Projetos Implantados</p>
+                    <p class="text-2xl font-bold text-primary">128+</p>
+                </div>
+                <div class="text-center">
+                    <p class="font-mono text-[10px] text-gray-500 uppercase mb-2">Dados Processados</p>
+                    <p class="text-2xl font-bold text-primary">4.2 TB</p>
+                </div>
+                <div class="text-center">
+                    <p class="font-mono text-[10px] text-gray-500 uppercase mb-2">Eficiência Operacional</p>
+                    <p class="text-2xl font-bold text-primary">MAX</p>
+                </div>
+            </div>
+        </section>
+        <section class="container mx-auto px-4 py-32 text-center">
+            <div
+                class="max-w-4xl mx-auto border border-primary/30 p-12 bg-surface/80 cyber-border relative overflow-hidden group">
+                <div
+                    class="absolute -right-20 -top-20 w-64 h-64 bg-primary/10 rounded-full blur-3xl group-hover:bg-primary/20 transition-all">
+                </div>
+                <p class="font-mono text-primary text-xs mb-6 tracking-[0.5em] uppercase">Iniciando Protocolo de Contato
+                </p>
+                <h2 class="text-4xl md:text-6xl font-bold uppercase mb-12 leading-tight">
+                    SUA MARCA MERECE UM <br /> <span class="text-primary italic">UPGRADE</span> SISTÊMICO.
+                </h2>
+                <a class="inline-flex items-center gap-4 px-12 py-5 bg-primary text-white font-bold uppercase text-sm tracking-widest hover:bg-white hover:text-dark transition-all"
+                    href="Contato.html">
+                    INICIAR CONEXÃO
+                    <span class="material-symbols-outlined">bolt</span>
+                </a>
+            </div>
+        </section>
+    </main>
+    <footer class="bg-dark border-t border-white/5 py-12 relative overflow-hidden">
+        <div class="container mx-auto px-4 relative z-10">
+            <div class="flex flex-col lg:flex-row justify-between items-start gap-16 mb-16">
+                <div>
+                    <h3 class="text-3xl font-bold tracking-tighter mb-6">REIS AUTOMAÇÃO®</h3>
+                    <p class="font-mono text-xs text-gray-500 max-w-sm leading-relaxed">
+                        Terminal de portifólios de serviços.
+                    </p>
+                </div>
+                <div class="grid grid-cols-2 md:grid-cols-3 gap-12 font-mono text-[10px]">
+                    <div>
+                        <h4 class="text-gray-400 uppercase mb-6 tracking-widest">NAVEGAÇÃO</h4>
+                        <ul class="space-y-4 text-white uppercase">
+                            <li><a class="hover:text-primary transition-colors" href="Página Inicial.html">Página
+                                    inicial</a></li>
+                            <li><a class="hover:text-primary transition-colors" href="Serviços.html">Serviços</a></li>
+                            <li><a class="hover:text-primary transition-colors" href="#">Políticas</a></li>
+                            <li><a class="hover:text-primary transition-colors" href="Contato.html">Contato</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4 class="text-gray-400 uppercase mb-6 tracking-widest">REDES SOCIAIS</h4>
+                        <ul class="space-y-4 text-white uppercase">
+                            <li><a class="hover:text-primary transition-colors" href="#">Instagram</a></li>
+                            <li><a class="hover:text-primary transition-colors" href="#">Facebook</a></li>
+                            <li><a class="hover:text-primary transition-colors" href="#">Threads</a></li>
+                            <li><a class="hover:text-primary transition-colors" href="#">LinkedIn</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-span-2 md:col-span-1">
+                        <h4 class="text-gray-400 uppercase mb-6 tracking-widest">CONTATO</h4>
+                        <ul class="space-y-2 text-white lowercase">
+                            <li class="flex items-center gap-2">
+                                <span class="material-symbols-outlined text-[14px] text-primary">mail</span>
+                                [EMAIL_ADDRESS]
+                            </li>
+                            <li class="flex items-center gap-2">
+                                <span class="material-symbols-outlined text-[14px] text-primary">call</span>
+                                +55.11.99999.9999
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div
+                class="flex flex-col md:flex-row justify-between items-center gap-6 pt-12 border-t border-white/5 font-mono text-[9px] text-gray-600 uppercase tracking-widest">
+                <p>© 2026 Reis Automação. TODOS OS BYTES RESERVADOS.</p>
+                <div class="flex gap-8">
+                    <a class="hover:text-white transition-colors" href="#">PRIVACY_POLICY</a>
+                    <a class="hover:text-white transition-colors" href="#">TERMS_OF_USE</a>
+                </div>
+            </div>
+        </div>
+        <div
+            class="absolute bottom-0 right-0 font-bold text-[15vw] opacity-[0.02] select-none pointer-events-none leading-none tracking-tighter">
+            PORTIFÓLIOS
+        </div>
+    </footer>
+
+</body>
+
+</html>
