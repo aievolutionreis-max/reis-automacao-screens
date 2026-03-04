@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Termos de Serviço | Reis Automação</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        brand: {
+                            orange: '#f02110',
+                            dark: '#000000',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style type="text/tailwindcss">
+        body {
+            background-color: #000000;
+            color: #fafafa;
+            font-family: 'Inter', sans-serif;
+        }
+        .legal-content h2 {
+            @apply text-2xl font-bold text-brand-orange mt-8 mb-4 border-l-4 border-brand-orange pl-4;
+        }
+        .legal-content p {
+            @apply text-gray-400 mb-4 leading-relaxed;
+        }
+        .legal-content ul {
+            @apply list-disc list-inside text-gray-400 mb-4 space-y-2 ml-4;
+        }
+    </style>
+</head>
+
+<body class="antialiased overflow-x-hidden">
+    <!-- Header -->
+    <nav class="fixed top-0 w-full z-50 bg-black/30 backdrop-blur-xl border-b border-white/5">
+        <div class="max-w-7xl mx-auto px-8 h-20 flex items-center justify-between">
+            <div class="flex items-center gap-2">
+                <a class="flex items-center gap-2" href="index.html">
+                    <span class="text-2xl font-black tracking-tighter text-white uppercase italic">Reis <span
+                            class="text-brand-orange italic">Automação</span></span>
+                </a>
+            </div>
+            <div class="hidden md:flex items-center gap-12">
+                <a class="text-[10px] font-black uppercase tracking-[0.3em] hover:text-brand-orange transition-colors"
+                    href="index.html">Página Inicial</a>
+                <a class="text-[10px] font-black uppercase tracking-[0.3em] hover:text-brand-orange transition-colors"
+                    href="servicos.html">Serviços</a>
+                <a class="text-[10px] font-black uppercase tracking-[0.3em] hover:text-brand-orange transition-colors"
+                    href="portfolios.html">Portifólios</a>
+                <a class="border border-white/20 px-8 py-3 text-[10px] font-black uppercase tracking-widest hover:bg-white hover:text-black transition-all"
+                    href="contato.html">Contato</a>
+            </div>
+            <button id="mobile-menu-btn" class="md:hidden text-white p-2">
+                <span class="material-symbols-outlined text-3xl">menu</span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu Overlay -->
+    <div id="mobile-menu-backdrop"
+        class="hidden fixed inset-0 z-[55] bg-black/60 backdrop-blur-sm opacity-0 transition-opacity duration-500">
+    </div>
+    <div id="mobile-menu"
+        class="fixed top-0 right-0 w-[300px] h-full bg-black z-[60] p-10 transform translate-x-full transition-all duration-500 ease-out flex flex-col hidden overflow-y-auto border-l border-white/5">
+        <div class="flex justify-end mb-12">
+            <button id="close-menu-btn" class="text-white p-2">
+                <span class="material-symbols-outlined text-3xl">close</span>
+            </button>
+        </div>
+        <div class="flex flex-col gap-8">
+            <a class="text-[10px] font-black uppercase tracking-[0.4em] text-white mobile-link" href="index.html">Página
+                Inicial</a>
+            <a class="text-[10px] font-black uppercase tracking-[0.4em] text-white mobile-link"
+                href="servicos.html">Serviços</a>
+            <a class="text-[10px] font-black uppercase tracking-[0.4em] text-white mobile-link"
+                href="portfolios.html">Portifólios</a>
+            <a class="bg-brand-orange text-white border border-brand-orange px-8 py-3.5 text-[10px] font-black uppercase tracking-widest mt-4 mobile-link"
+                href="contato.html">Fale Conosco</a>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <main class="pt-32 pb-20 px-8 max-w-4xl mx-auto">
+        <h1 class="text-4xl md:text-6xl font-black tracking-tighter uppercase mb-2">Termos de</h1>
+        <h1 class="text-4xl md:text-6xl font-black tracking-tighter uppercase mb-12 text-brand-orange">Serviço</h1>
+
+        <div class="legal-content">
+            <p>Última atualização: 04 de Março de 2026</p>
+
+            <p>Bem-vindo à Reis Automação. Ao acessar nosso site e utilizar nossos serviços, você concorda em cumprir e
+                estar vinculado aos seguintes termos e condições.</p>
+
+            <h2>1. Aceitação dos Termos</h2>
+            <p>O uso deste site e a contratação de nossos serviços implicam na aceitação total destes Termos de Serviço.
+                Se você não concordar com qualquer parte destes termos, não deverá utilizar nossos serviços.</p>
+
+            <h2>2. Descrição dos Serviços</h2>
+            <p>A Reis Automação oferece soluções de marketing digital, automação de processos via Inteligência
+                Artificial, desenvolvimento de websites premium e consultoria de vendas. O escopo específico de cada
+                serviço será detalhado em contrato ou proposta comercial individualizada.</p>
+
+            <h2>3. Uso do Site e Materiais</h2>
+            <p>Todo o conteúdo deste site (textos, imagens, logos, designs) é de propriedade exclusiva da Reis Automação
+                ou de seus licenciadores, protegido por leis de propriedade intelectual. É proibida a reprodução,
+                distribuição ou modificação do conteúdo sem autorização prévia por escrito.</p>
+
+            <h2>4. Responsabilidades do Usuário</h2>
+            <p>Ao utilizar nossos serviços, você se compromete a:</p>
+            <ul>
+                <li>Fornecer informações verídicas e atualizadas</li>
+                <li>Não utilizar nossos serviços para fins ilícitos ou abusivos</li>
+                <li>Respeitar a propriedade intelectual de terceiros</li>
+                <li>Manter a confidencialidade de eventuais acessos fornecidos</li>
+            </ul>
+
+            <h2>5. Limitação de Responsabilidade</h2>
+            <p>A Reis Automação busca a excelência em suas entregas, porém não se responsabiliza por prejuízos
+                indiretos, lucros cessantes ou danos decorrentes de fatores externos, alterações de algoritmos de
+                terceiros (como Google ou redes sociais) ou uso indevido das ferramentas por parte do cliente.</p>
+
+            <h2>6. Pagamentos e Cancelamento</h2>
+            <p>As condições de pagamento, prazos de entrega e políticas de cancelamento são estabelecidos em cada
+                contrato de serviço específico. A inadimplência poderá resultar na suspensão imediata dos serviços
+                contratados.</p>
+
+            <h2>7. Modificações dos Termos</h2>
+            <p>Reservamo-nos o direito de alterar estes Termos de Serviço a qualquer momento. Alterações entrarão em
+                vigor imediatamente após sua publicação no site. O uso continuado do site após tais alterações constitui
+                sua aceitação dos novos termos.</p>
+
+            <h2>8. Lei Aplicável</h2>
+            <p>Estes termos são regidos pelas leis da República Federativa do Brasil. Fica eleito o foro da comarca de
+                Belo Horizonte, MG, para dirimir quaisquer questões oriundas deste documento.</p>
+
+            <h2>9. Contato</h2>
+            <p>Dúvidas sobre os Termos de Serviço? Fale conosco: <a href="mailto:aievolutionreis@gmail.com"
+                    class="text-brand-orange hover:underline">aievolutionreis@gmail.com</a></p>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-black text-white py-16 px-8 border-t border-white/10">
+        <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-16">
+            <div class="col-span-1 md:col-span-2">
+                <span class="text-3xl font-extrabold tracking-tighter text-white mb-8 block">REIS <span
+                        class="text-brand-orange">AUTOMAÇÃO</span></span>
+                <p class="text-gray-500 max-w-sm text-lg leading-relaxed">Sua parceira estratégica em marketing digital
+                    e inteligência de vendas.</p>
+            </div>
+            <div>
+                <h4 class="font-black text-xs uppercase tracking-[0.3em] mb-8 text-brand-orange">Menu de Navegação</h4>
+                <ul class="text-gray-400 space-y-4 text-sm font-bold uppercase tracking-widest">
+                    <li><a class="hover:text-white transition-colors" href="index.html">Página Inicial</a></li>
+                    <li><a class="hover:text-white transition-colors" href="servicos.html">Serviços</a></li>
+                    <li><a class="hover:text-white transition-colors" href="portfolios.html">Portifólios</a></li>
+                    <li><a class="hover:text-white transition-colors" href="contato.html">Contato</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="font-black text-xs uppercase tracking-[0.3em] mb-8 text-brand-orange">Fale Conosco</h4>
+                <ul class="text-gray-400 space-y-4 text-sm font-bold uppercase tracking-widest">
+                    <li>aievolutionreis@gmail.com</li>
+                    <li>+55 (31) 7319-6580</li>
+                </ul>
+            </div>
+        </div>
+        <div
+            class="max-w-7xl mx-auto mt-16 pt-8 border-t border-white/5 flex flex-col md:flex-row justify-between items-center text-[10px] uppercase tracking-[0.2em] text-gray-600 font-bold">
+            <p>© 2026 REIS AUTOMAÇÃO. Todos os direitos reservados. Desenvolvido por <a href="#">Reis Automação</a></p>
+            <div class="flex gap-10">
+                <a class="hover:text-white" href="politica-privacidade.html">Privacidade</a>
+                <a class="hover:text-white" href="termos-servico.html">Termos</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            // Mobile Menu Logic
+            const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+            const closeMenuBtn = document.getElementById('close-menu-btn');
+            const mobileMenu = document.getElementById('mobile-menu');
+            const mobileMenuBackdrop = document.getElementById('mobile-menu-backdrop');
+            const mobileLinks = document.querySelectorAll('.mobile-link');
+
+            const toggleMenu = (show) => {
+                if (show) {
+                    mobileMenu.classList.remove('hidden');
+                    mobileMenuBackdrop.classList.remove('hidden');
+                    setTimeout(() => {
+                        mobileMenu.classList.remove('opacity-0', 'translate-x-full');
+                        mobileMenuBackdrop.classList.remove('opacity-0');
+                    }, 10);
+                    document.body.style.overflow = 'hidden';
+                } else {
+                    mobileMenu.classList.add('opacity-0', 'translate-x-full');
+                    mobileMenuBackdrop.classList.add('opacity-0');
+                    setTimeout(() => {
+                        mobileMenu.classList.add('hidden');
+                        mobileMenuBackdrop.classList.add('hidden');
+                    }, 500);
+                    document.body.style.overflow = '';
+                }
+            };
+
+            mobileMenuBtn.addEventListener('click', () => toggleMenu(true));
+            closeMenuBtn.addEventListener('click', () => toggleMenu(false));
+            mobileMenuBackdrop.addEventListener('click', () => toggleMenu(false));
+            mobileLinks.forEach(link => link.addEventListener('click', () => toggleMenu(false)));
+        });
+    </script>
+</body>
+
+</html>

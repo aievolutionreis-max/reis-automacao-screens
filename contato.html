@@ -93,23 +93,23 @@
       </div>
     </div>
 
-    <!-- Mobile Menu Overlay -->
-    <div id="mobile-menu"
-      class="hidden fixed inset-0 z-[60] bg-black/95 backdrop-blur-2xl flex flex-col items-center justify-center gap-8 transition-all duration-500 opacity-0 transform translate-x-full">
-      <button id="close-menu-btn" class="absolute top-8 right-8 text-white p-2">
-        <span class="material-symbols-outlined text-4xl">close</span>
-      </button>
-      <div class="flex flex-col items-center gap-8 text-xl font-black uppercase tracking-widest text-white">
-        <a class="hover:text-brand transition-colors mobile-link" href="index.html">Home</a>
-        <a class="hover:text-brand transition-colors mobile-link" href="servicos.html">Serviços</a>
-        <a class="hover:text-brand transition-colors mobile-link" href="contato.html">Contato</a>
-        <a class="bg-brand text-white px-10 py-4 rounded-custom text-sm font-bold uppercase tracking-widest mt-4 mobile-link"
-          href="contato.html">
-          Fale Conosco
-        </a>
-      </div>
-    </div>
   </nav>
+
+  <!-- Mobile Menu Overlay -->
+  <div id="mobile-menu-backdrop"
+    class="hidden fixed inset-0 z-[55] bg-black/60 backdrop-blur-sm opacity-0 transition-opacity duration-500"></div>
+  <div id="mobile-menu"
+    class="hidden fixed inset-y-0 right-0 w-[280px] z-[60] bg-zinc-950 flex flex-col items-center justify-center gap-6 transition-all duration-500 opacity-0 transform translate-x-full border-l border-white/10">
+    <button id="close-menu-btn" class="absolute top-6 right-6 text-white p-2">
+      <span class="material-symbols-outlined text-4xl">close</span>
+    </button>
+    <div class="flex flex-col items-center gap-6 text-[11px] font-bold uppercase tracking-[0.3em] text-white">
+      <a class="hover:text-primary transition-colors mobile-link" href="index.html">Página inicial</a>
+      <a class="hover:text-primary transition-colors mobile-link" href="servicos.html">Serviços</a>
+      <a class="hover:text-primary transition-colors mobile-link" href="portfolios.html">Portifólios</a>
+      <a class="hover:text-primary transition-colors mobile-link" href="contato.html">Contato</a>
+    </div>
+  </div>
   <!-- END: Navigation -->
   <main class="relative pt-32 pb-20 overflow-hidden">
     <!-- Subtle Glows -->
@@ -146,9 +146,9 @@
                 </svg>
               </div>
               <div>
-                <p class="text-xs uppercase tracking-widest text-gray-500 mb-1">Email</p>
+                <p class="text-xs uppercase tracking-widest text-gray-500 mb-1">E-mail</p>
                 <a class="text-xl font-medium hover:text-brand transition-colors"
-                  href="mailto:[EMAIL_ADDRESS]">[EMAIL_ADDRESS]</a>
+                  href="mailto:aievolutionreis@gmail.com">aievolutionreis@gmail.com</a>
               </div>
             </div>
             <!-- Phone -->
@@ -163,8 +163,8 @@
               </div>
               <div>
                 <p class="text-xs uppercase tracking-widest text-gray-500 mb-1">Telefone</p>
-                <a class="text-xl font-medium hover:text-brand transition-colors" href="tel:+123456789">+1 (234)
-                  567-890</a>
+                <a class="text-xl font-medium hover:text-brand transition-colors" href="wa.me/553173196580">+55 (31)
+                  97319-6580</a>
               </div>
             </div>
             <!-- Location -->
@@ -180,7 +180,7 @@
               </div>
               <div>
                 <p class="text-xs uppercase tracking-widest text-gray-500 mb-1">Localização</p>
-                <p class="text-xl font-medium">123 Design Street, Studio 4<br />San Francisco, CA 94103</p>
+                <p class="text-xl font-medium">Belo Horizonte, MG<br />Brasil</p>
               </div>
             </div>
           </div>
@@ -262,19 +262,20 @@
         <div class="space-y-4">
           <h4 class="text-white font-semibold mb-6">Navegação</h4>
           <ul class="space-y-3 text-gray-400">
-            <li><a class="hover:text-white transition-colors" href="#">Home</a></li>
-            <li><a class="hover:text-white transition-colors" href="#">Sobre</a></li>
-            <li><a class="hover:text-white transition-colors" href="#">Projetos</a></li>
-            <li><a class="hover:text-white transition-colors" href="#">Preços</a></li>
+            <li><a class="hover:text-white transition-colors" href="index.html">Página inicial</a></li>
+            <li><a class="hover:text-white transition-colors" href="servicos.html">Serviços</a></li>
+            <li><a class="hover:text-white transition-colors" href="portfolios.html">Portifólios</a></li>
+            <li><a class="hover:text-white transition-colors" href="contato.html">Contato</a></li>
           </ul>
         </div>
         <div class="space-y-4">
           <h4 class="text-white font-semibold mb-6">Contato</h4>
           <ul class="space-y-3 text-gray-400">
-            <li><a class="hover:text-white transition-colors" href="mailto:hello@folioblox.com">[EMAIL_ADDRESS]</a>
+            <li><a class="hover:text-white transition-colors"
+                href="mailto:aievolutionreis@gmail.com">aievolutionreis@gmail.com</a>
             </li>
-            <li><a class="hover:text-white transition-colors" href="#">San Francisco, CA</a></li>
-            <li><a class="hover:text-white transition-colors" href="#">Schedule a Call</a></li>
+            <li><a class="hover:text-white transition-colors" href="#">Belo Horizonte, MG</a></li>
+            <li><a class="hover:text-white transition-colors" href="wa.me/553173196580">31 7319-6580</li>
           </ul>
         </div>
       </div>
@@ -286,8 +287,8 @@
         class="flex flex-col md:flex-row justify-between items-center pt-8 border-t border-white/5 text-xs text-gray-500 gap-4">
         <p>© 2024 Reis Automação. Todos os direitos reservados.</p>
         <div class="flex space-x-6">
-          <a class="hover:text-white" href="#">Privacy Policy</a>
-          <a class="hover:text-white" href="#">Terms of Service</a>
+          <a class="hover:text-white" href="politica-privacidade.html">Privacidade</a>
+          <a class="hover:text-white" href="termos-servico.html">Termos de serviço</a>
         </div>
       </div>
     </div>
@@ -300,19 +301,24 @@
       const mobileMenuBtn = document.getElementById('mobile-menu-btn');
       const closeMenuBtn = document.getElementById('close-menu-btn');
       const mobileMenu = document.getElementById('mobile-menu');
+      const mobileMenuBackdrop = document.getElementById('mobile-menu-backdrop');
       const mobileLinks = document.querySelectorAll('.mobile-link');
 
       const toggleMenu = (show) => {
         if (show) {
           mobileMenu.classList.remove('hidden');
+          mobileMenuBackdrop.classList.remove('hidden');
           setTimeout(() => {
             mobileMenu.classList.remove('opacity-0', 'translate-x-full');
+            mobileMenuBackdrop.classList.remove('opacity-0');
           }, 10);
           document.body.style.overflow = 'hidden';
         } else {
           mobileMenu.classList.add('opacity-0', 'translate-x-full');
+          mobileMenuBackdrop.classList.add('opacity-0');
           setTimeout(() => {
             mobileMenu.classList.add('hidden');
+            mobileMenuBackdrop.classList.add('hidden');
           }, 500);
           document.body.style.overflow = '';
         }
@@ -320,6 +326,7 @@
 
       mobileMenuBtn?.addEventListener('click', () => toggleMenu(true));
       closeMenuBtn?.addEventListener('click', () => toggleMenu(false));
+      mobileMenuBackdrop?.addEventListener('click', () => toggleMenu(false));
       mobileLinks.forEach(link => link.addEventListener('click', () => toggleMenu(false)));
     });
   </script>

@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Política de Privacidade | Reis Automação</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        brand: {
+                            orange: '#f02110',
+                            dark: '#000000',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style type="text/tailwindcss">
+        body {
+            background-color: #000000;
+            color: #fafafa;
+            font-family: 'Inter', sans-serif;
+        }
+        .legal-content h2 {
+            @apply text-2xl font-bold text-brand-orange mt-8 mb-4 border-l-4 border-brand-orange pl-4;
+        }
+        .legal-content p {
+            @apply text-gray-400 mb-4 leading-relaxed;
+        }
+        .legal-content ul {
+            @apply list-disc list-inside text-gray-400 mb-4 space-y-2 ml-4;
+        }
+    </style>
+</head>
+
+<body class="antialiased overflow-x-hidden">
+    <!-- Header -->
+    <nav class="fixed top-0 w-full z-50 bg-black/30 backdrop-blur-xl border-b border-white/5">
+        <div class="max-w-7xl mx-auto px-8 h-20 flex items-center justify-between">
+            <div class="flex items-center gap-2">
+                <a class="flex items-center gap-2" href="index.html">
+                    <span class="text-2xl font-black tracking-tighter text-white uppercase italic">Reis <span
+                            class="text-brand-orange italic">Automação</span></span>
+                </a>
+            </div>
+            <div class="hidden md:flex items-center gap-12">
+                <a class="text-[10px] font-black uppercase tracking-[0.3em] hover:text-brand-orange transition-colors"
+                    href="index.html">Página Inicial</a>
+                <a class="text-[10px] font-black uppercase tracking-[0.3em] hover:text-brand-orange transition-colors"
+                    href="servicos.html">Serviços</a>
+                <a class="text-[10px] font-black uppercase tracking-[0.3em] hover:text-brand-orange transition-colors"
+                    href="portfolios.html">Portifólios</a>
+                <a class="border border-white/20 px-8 py-3 text-[10px] font-black uppercase tracking-widest hover:bg-white hover:text-black transition-all"
+                    href="contato.html">Contato</a>
+            </div>
+            <button id="mobile-menu-btn" class="md:hidden text-white p-2">
+                <span class="material-symbols-outlined text-3xl">menu</span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu Overlay -->
+    <div id="mobile-menu-backdrop"
+        class="hidden fixed inset-0 z-[55] bg-black/60 backdrop-blur-sm opacity-0 transition-opacity duration-500">
+    </div>
+    <div id="mobile-menu"
+        class="fixed top-0 right-0 w-[300px] h-full bg-black z-[60] p-10 transform translate-x-full transition-all duration-500 ease-out flex flex-col hidden overflow-y-auto border-l border-white/5">
+        <div class="flex justify-end mb-12">
+            <button id="close-menu-btn" class="text-white p-2">
+                <span class="material-symbols-outlined text-3xl">close</span>
+            </button>
+        </div>
+        <div class="flex flex-col gap-8">
+            <a class="text-[10px] font-black uppercase tracking-[0.4em] text-white mobile-link" href="index.html">Página
+                Inicial</a>
+            <a class="text-[10px] font-black uppercase tracking-[0.4em] text-white mobile-link"
+                href="servicos.html">Serviços</a>
+            <a class="text-[10px] font-black uppercase tracking-[0.4em] text-white mobile-link"
+                href="portfolios.html">Portifólios</a>
+            <a class="bg-brand-orange text-white border border-brand-orange px-8 py-3.5 text-[10px] font-black uppercase tracking-widest mt-4 mobile-link"
+                href="contato.html">Fale Conosco</a>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <main class="pt-32 pb-20 px-8 max-w-4xl mx-auto">
+        <h1 class="text-4xl md:text-6xl font-black tracking-tighter uppercase mb-2">Política de</h1>
+        <h1 class="text-4xl md:text-6xl font-black tracking-tighter uppercase mb-12 text-brand-orange">Privacidade</h1>
+
+        <div class="legal-content">
+            <p>Última atualização: 04 de Março de 2026</p>
+
+            <p>A Reis Automação valoriza a sua privacidade. Esta Política de Privacidade descreve como coletamos, usamos
+                e protegemos suas informações pessoais quando você interage com nosso site e serviços.</p>
+
+            <h2>1. Coleta de Informações</h2>
+            <p>Coletamos informações que você nos fornece diretamente, como quando você solicita um orçamento, entra em
+                contato conosco ou se inscreve em nossa newsletter. Isso pode incluir:</p>
+            <ul>
+                <li>Nome completo</li>
+                <li>Endereço de e-mail</li>
+                <li>Número de telefone / WhatsApp</li>
+                <li>Informações sobre sua empresa e necessidades de automação</li>
+            </ul>
+
+            <h2>2. Uso das Informações</h2>
+            <p>Utilizamos os dados coletados para:</p>
+            <ul>
+                <li>Fornecer e gerenciar nossos serviços de automação e marketing</li>
+                <li>Responder a suas solicitações e dúvidas</li>
+                <li>Enviar comunicações de marketing e atualizações (quando autorizado)</li>
+                <li>Melhorar a experiência do usuário em nosso site</li>
+                <li>Garantir a segurança de nossas operações</li>
+            </ul>
+
+            <h2>3. Proteção e Segurança</h2>
+            <p>Implementamos medidas técnicas e organizacionais adequadas para proteger seus dados contra acesso não
+                autorizado, alteração, divulgação ou destruição. Seus dados são armazenados em ambientes seguros e o
+                acesso é restrito a pessoal autorizado.</p>
+
+            <h2>4. Compartilhamento de Dados</h2>
+            <p>Não vendemos nem alugamos suas informações pessoais para terceiros. Podemos compartilhar dados apenas com
+                parceiros e ferramentas de confiança necessários para a prestação dos nossos serviços (ex: CRMs,
+                ferramentas de e-mail marketing), sempre sob rígidos contratos de confidencialidade.</p>
+
+            <h2>5. Seus Direitos</h2>
+            <p>Conforme a Lei Geral de Proteção de Dados (LGPD), você tem o direito de:</p>
+            <ul>
+                <li>Confirmar a existência de tratamento de seus dados</li>
+                <li>Acessar seus dados pessoais</li>
+                <li>Corrigir dados incompletos ou inexatos</li>
+                <li>Solicitar a exclusão de seus dados de nossa base</li>
+                <li>Revogar seu consentimento a qualquer momento</li>
+            </ul>
+
+            <h2>6. Cookies</h2>
+            <p>Utilizamos cookies para entender como os visitantes usam nosso site e para personalizar sua experiência.
+                Você pode gerenciar as preferências de cookies através das configurações do seu navegador.</p>
+
+            <h2>7. Contato</h2>
+            <p>Para exercer seus direitos ou tirar dúvidas sobre esta política, entre em contato conosco através do
+                e-mail: <a href="mailto:aievolutionreis@gmail.com"
+                    class="text-brand-orange hover:underline">aievolutionreis@gmail.com</a></p>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-black text-white py-16 px-8 border-t border-white/10">
+        <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-16">
+            <div class="col-span-1 md:col-span-2">
+                <span class="text-3xl font-extrabold tracking-tighter text-white mb-8 block">REIS <span
+                        class="text-brand-orange">AUTOMAÇÃO</span></span>
+                <p class="text-gray-500 max-w-sm text-lg leading-relaxed">Sua parceira estratégica em marketing digital
+                    e inteligência de vendas.</p>
+            </div>
+            <div>
+                <h4 class="font-black text-xs uppercase tracking-[0.3em] mb-8 text-brand-orange">Menu de Navegação</h4>
+                <ul class="text-gray-400 space-y-4 text-sm font-bold uppercase tracking-widest">
+                    <li><a class="hover:text-white transition-colors" href="index.html">Página Inicial</a></li>
+                    <li><a class="hover:text-white transition-colors" href="servicos.html">Serviços</a></li>
+                    <li><a class="hover:text-white transition-colors" href="portfolios.html">Portifólios</a></li>
+                    <li><a class="hover:text-white transition-colors" href="contato.html">Contato</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="font-black text-xs uppercase tracking-[0.3em] mb-8 text-brand-orange">Fale Conosco</h4>
+                <ul class="text-gray-400 space-y-4 text-sm font-bold uppercase tracking-widest">
+                    <li>aievolutionreis@gmail.com</li>
+                    <li>+55 (31) 7319-6580</li>
+                </ul>
+            </div>
+        </div>
+        <div
+            class="max-w-7xl mx-auto mt-16 pt-8 border-t border-white/5 flex flex-col md:flex-row justify-between items-center text-[10px] uppercase tracking-[0.2em] text-gray-600 font-bold">
+            <p>© 2026 REIS AUTOMAÇÃO. Todos os direitos reservados. Desenvolvido por <a href="#">Reis Automação</a></p>
+            <div class="flex gap-10">
+                <a class="hover:text-white" href="politica-privacidade.html">Privacidade</a>
+                <a class="hover:text-white" href="termos-servico.html">Termos</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            // Mobile Menu Logic
+            const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+            const closeMenuBtn = document.getElementById('close-menu-btn');
+            const mobileMenu = document.getElementById('mobile-menu');
+            const mobileMenuBackdrop = document.getElementById('mobile-menu-backdrop');
+            const mobileLinks = document.querySelectorAll('.mobile-link');
+
+            const toggleMenu = (show) => {
+                if (show) {
+                    mobileMenu.classList.remove('hidden');
+                    mobileMenuBackdrop.classList.remove('hidden');
+                    setTimeout(() => {
+                        mobileMenu.classList.remove('opacity-0', 'translate-x-full');
+                        mobileMenuBackdrop.classList.remove('opacity-0');
+                    }, 10);
+                    document.body.style.overflow = 'hidden';
+                } else {
+                    mobileMenu.classList.add('opacity-0', 'translate-x-full');
+                    mobileMenuBackdrop.classList.add('opacity-0');
+                    setTimeout(() => {
+                        mobileMenu.classList.add('hidden');
+                        mobileMenuBackdrop.classList.add('hidden');
+                    }, 500);
+                    document.body.style.overflow = '';
+                }
+            };
+
+            mobileMenuBtn.addEventListener('click', () => toggleMenu(true));
+            closeMenuBtn.addEventListener('click', () => toggleMenu(false));
+            mobileMenuBackdrop.addEventListener('click', () => toggleMenu(false));
+            mobileLinks.forEach(link => link.addEventListener('click', () => toggleMenu(false)));
+        });
+    </script>
+</body>
+
+</html>

@@ -103,11 +103,32 @@
                 <a class="bg-primary/10 border border-primary/50 text-primary px-4 py-2 hover:bg-primary hover:text-white transition-all"
                     href="contato.html">ESTABELECER_CONTATO</a>
             </nav>
-            <button aria-label="Menu" class="lg:hidden text-primary">
+            <button id="mobile-menu-btn" aria-label="Menu" class="lg:hidden text-primary">
                 <span class="material-symbols-outlined">menu_open</span>
             </button>
         </div>
     </header>
+
+    <!-- Mobile Menu Overlay -->
+    <div id="mobile-menu-backdrop"
+        class="hidden fixed inset-0 z-[55] bg-black/60 backdrop-blur-sm opacity-0 transition-opacity duration-500">
+    </div>
+    <div id="mobile-menu"
+        class="hidden fixed inset-y-0 right-0 w-[280px] z-[60] bg-zinc-950 flex flex-col items-center justify-center gap-6 transition-all duration-500 opacity-0 transform translate-x-full border-l border-white/10">
+        <button id="close-menu-btn" class="absolute top-6 right-6 text-white p-2">
+            <span class="material-symbols-outlined text-4xl">close</span>
+        </button>
+        <div class="flex flex-col items-center gap-6 text-[11px] font-bold uppercase tracking-[0.3em] text-white">
+            <a class="hover:text-primary transition-colors mobile-link" href="index.html">Página inicial</a>
+            <a class="hover:text-primary transition-colors mobile-link" href="servicos.html">Serviços</a>
+            <a class="hover:text-primary transition-colors mobile-link" href="portfolios.html">Portifólios</a>
+            <a class="hover:text-primary transition-colors mobile-link" href="contato.html">Contato</a>
+            <a class="bg-primary text-white border border-primary px-8 py-3.5 text-[10px] font-black uppercase tracking-widest mt-4 mobile-link"
+                href="contato.html">
+                Fale Conosco
+            </a>
+        </div>
+    </div>
     <main class="pt-24 pb-20">
         <section class="container mx-auto px-4 mb-12">
             <div class="border-l-4 border-primary pl-6 py-8 bg-surface/50 cyber-border">
@@ -429,7 +450,8 @@
                             <li><a class="hover:text-primary transition-colors" href="index.html">Página
                                     inicial</a></li>
                             <li><a class="hover:text-primary transition-colors" href="servicos.html">Serviços</a></li>
-                            <li><a class="hover:text-primary transition-colors" href="#">Políticas</a></li>
+                            <li><a class="hover:text-primary transition-colors"
+                                    href="politica-privacidade.html">Privacidade</a></li>
                             <li><a class="hover:text-primary transition-colors" href="contato.html">Contato</a></li>
                         </ul>
                     </div>
@@ -447,11 +469,11 @@
                         <ul class="space-y-2 text-white lowercase">
                             <li class="flex items-center gap-2">
                                 <span class="material-symbols-outlined text-[14px] text-primary">mail</span>
-                                [EMAIL_ADDRESS]
+                                aievolutionreis@gmail.com
                             </li>
                             <li class="flex items-center gap-2">
                                 <span class="material-symbols-outlined text-[14px] text-primary">call</span>
-                                +55.11.99999.9999
+                                +55 (31) 7319-6580
                             </li>
                         </ul>
                     </div>
@@ -461,8 +483,8 @@
                 class="flex flex-col md:flex-row justify-between items-center gap-6 pt-12 border-t border-white/5 font-mono text-[9px] text-gray-600 uppercase tracking-widest">
                 <p>© 2026 Reis Automação. TODOS OS BYTES RESERVADOS.</p>
                 <div class="flex gap-8">
-                    <a class="hover:text-white transition-colors" href="#">PRIVACY_POLICY</a>
-                    <a class="hover:text-white transition-colors" href="#">TERMS_OF_USE</a>
+                    <a class="hover:text-white transition-colors" href="politica-privacidade.html">Privacidade</a>
+                    <a class="hover:text-white transition-colors" href="termos-servico.html">Termos de serviço</a>
                 </div>
             </div>
         </div>
@@ -472,6 +494,41 @@
         </div>
     </footer>
 
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            // Mobile Menu Logic
+            const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+            const closeMenuBtn = document.getElementById('close-menu-btn');
+            const mobileMenu = document.getElementById('mobile-menu');
+            const mobileMenuBackdrop = document.getElementById('mobile-menu-backdrop');
+            const mobileLinks = document.querySelectorAll('.mobile-link');
+
+            const toggleMenu = (show) => {
+                if (show) {
+                    mobileMenu.classList.remove('hidden');
+                    mobileMenuBackdrop.classList.remove('hidden');
+                    setTimeout(() => {
+                        mobileMenu.classList.remove('opacity-0', 'translate-x-full');
+                        mobileMenuBackdrop.classList.remove('opacity-0');
+                    }, 10);
+                    document.body.style.overflow = 'hidden';
+                } else {
+                    mobileMenu.classList.add('opacity-0', 'translate-x-full');
+                    mobileMenuBackdrop.classList.add('opacity-0');
+                    setTimeout(() => {
+                        mobileMenu.classList.add('hidden');
+                        mobileMenuBackdrop.classList.add('hidden');
+                    }, 500);
+                    document.body.style.overflow = '';
+                }
+            };
+
+            mobileMenuBtn?.addEventListener('click', () => toggleMenu(true));
+            closeMenuBtn?.addEventListener('click', () => toggleMenu(false));
+            mobileMenuBackdrop?.addEventListener('click', () => toggleMenu(false));
+            mobileLinks.forEach(link => link.addEventListener('click', () => toggleMenu(false)));
+        });
+    </script>
 </body>
 
 </html>
